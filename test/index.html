@@ -17,20 +17,16 @@
 <div class="zxx_out_box">
     <div class="zxx_in_box">
         <div class="zxx_header">
-            <a href="http://www.zhangxinxu.com/">
-                <img class="l" src="index_logo.gif" />
-            </a>
-            <span class="zxx_author_time">by zhangxinxu 2012-12-05 9:52</span>
+
         </div>
         <h1 class="zxx_title">jQuery html5Validate表单验证插件测试</h1>
         <div class="tr">
-        	<a href="https://github.com/zhangxinxu/html5validate/archive/master.zip" class="btn btn_blue">源文件下载.zip</a>
         </div>
         <div class="zxx_main_con">
 			<form id="testForm" action="" method="post">
                 <div class="mb15">
-                	邮箱：<input type="email " name="email" data-type="required" multiple />
-                    <span class="f9 g6 ml10">无label无required, type=email+空格, multiple</span>
+                	邮箱：<input type="email" name="email" multiple />
+                    <span class="f9 g6 ml10">无label无required, type=email, multiple</span>
                     <span class="ml20 g9">方便复制：a@a.com</span>
                 </div>
                 <div class="mb15">
@@ -39,15 +35,19 @@
                 </div>
                 <div class="mb15"><label for="email1">邮箱：</label><input type="email" id="email1" required /><span class="f9 g6 ml10">有label有required</span></div>
                 <div class="mb15">
-                	<label for="mobile">手机：</label><input type="tel|xxxx" id="mobile" required />
-                    <span class="f9 g6 ml10">有label有required &emsp; type="tel|xxxx" 管道符功能测试(xxxx不存在, 忽略)</span>
+                	<label for="mobile">手机：</label><input type="tel" data-type="tel|xxxx" id="mobile" required />
+                    <span class="f9 g6 ml10">有label有required &emsp; data-type="tel|xxxx" 管道符功能测试(xxxx不存在, 忽略)</span>
                 </div>
                 <div class="mb15">
-                	<label for="emailTel">邮箱/手机：</label><input type="tel|email" id="emailTel" placeholder="请输入手机或邮箱" required />
-                    <span class="f9 g6 ml10">有label有required  &emsp; type="tel|email" 管道符功能测试</span>
+                    <label for="emailTel">手机/邮箱：</label><input type="text" data-type="phone|email" id="emailTel" placeholder="请输入手机或邮箱" required />
+                    <span class="f9 g6 ml10">有label有required  &emsp; type="phone|email" 管道符功能测试</span>
                 </div>
                 <div class="mb15">
-                	<label for="zipcode">邮编：</label><input type="zipcode" id="zipcode" /><span class="f9 g6 ml10">有label, 非HTML5规范，国产 type="zipcode"</span>
+                	<label for="tel">电话：</label><input type="tel" id="tel" placeholder="请输入手机" required />
+                    <span class="f9 g6 ml10">有label有required  &emsp; type="tel"</span>
+                </div>
+                <div class="mb15">
+                	<label for="zipcode">邮编：</label><input type="text" data-type="zipcode" id="zipcode" /><span class="f9 g6 ml10">有label, 非HTML5规范，国产 type="zipcode"</span>
                 </div>
                 <div class="mb15"><label for="url">网站地址：</label><input type="url" id="url" /><span class="f9 g6 ml10">有label, type="url"</span></div>
                 <div class="mb15">口味：<select required>
@@ -110,16 +110,12 @@
             </form>        
         </div>
         <div class="zxx_footer">
-            Copyright &copy; <a href="http://www.zhangxinxu.com/">张鑫旭-鑫空间-鑫生活</a>
-            |
-            <a href="http://www.zhangxinxu.com/wordpress/?p=2857">该篇相关文章</a>
-            |
-            <a href="https://github.com/zhangxinxu/html5validate/archive/master.zip">源文件打包下载</a>
+
         </div>
     </div>
 </div>
 
-<script src="jquery.min.js"></script>
+<script src="jquery.js"></script>
 <script src="../src/jquery-html5Validate.js"></script>
 <script>
 /*$.testRemind.css = {
